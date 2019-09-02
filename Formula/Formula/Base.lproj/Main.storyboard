@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XsB-Pm-Nwl">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,43 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="9u2-47-Fjf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0nY-Hc-2hi">
-                                <rect key="frame" x="50" y="138" width="314" height="674"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6T-Hj-PdP">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="332"/>
-                                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="Multiplying by 6">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="formula1ButtonTapped:" destination="XsB-Pm-Nwl" eventType="touchUpInside" id="jve-ek-lB3"/>
-                                            <segue destination="4tB-nR-8ra" kind="show" identifier="MultiplyingBySixDetail" id="4Py-he-ihH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3F-Wb-e4V">
-                                        <rect key="frame" x="0.0" y="342" width="314" height="332"/>
-                                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="The Answer is 2">
-                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="4tB-nR-8ra" kind="show" id="uFd-Gn-tz7"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" red="0.168471396" green="0.51802176239999997" blue="0.82454192640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="0nY-Hc-2hi" firstAttribute="leading" secondItem="0ek-V8-ieu" secondAttribute="leading" constant="50" id="dw0-Fy-S5T"/>
-                            <constraint firstItem="0ek-V8-ieu" firstAttribute="bottom" secondItem="0nY-Hc-2hi" secondAttribute="bottom" constant="50" id="fts-RS-H6t"/>
-                            <constraint firstItem="0nY-Hc-2hi" firstAttribute="top" secondItem="0ek-V8-ieu" secondAttribute="top" constant="50" id="icf-y3-yJV"/>
-                            <constraint firstItem="0ek-V8-ieu" firstAttribute="trailing" secondItem="0nY-Hc-2hi" secondAttribute="trailing" constant="50" id="ybI-dX-aPH"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0ek-V8-ieu"/>
                     </view>
                     <navigationItem key="navigationItem" id="fHy-93-Ewh"/>
@@ -62,65 +26,5 @@
             </objects>
             <point key="canvasLocation" x="1327.536231884058" y="-207.58928571428569"/>
         </scene>
-        <!--Detail View Controller-->
-        <scene sceneID="W7w-dc-mtF">
-            <objects>
-                <viewController id="4tB-nR-8ra" customClass="DetailViewController" customModule="Formula" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="m2y-xz-dOS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xuK-yb-mie">
-                                <rect key="frame" x="88" y="433" width="237" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="this is where the explanation goes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-if-ZpW">
-                                <rect key="frame" x="76" y="268" width="260" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPm-v1-xTU">
-                                <rect key="frame" x="153" y="548" width="118" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.168471396" green="0.51802176239999997" blue="0.82454192640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="nDF-zl-sfW"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="orc-jc-x58" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2292.753623188406" y="-207.58928571428569"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="m6z-yF-WeY">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L5r-x9-Lr0" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hLy-nq-Ild">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="XsB-Pm-Nwl" kind="relationship" relationship="rootViewController" id="9YI-Ky-zkq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PeC-RG-zUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="417.39130434782612" y="-207.58928571428569"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="uFd-Gn-tz7"/>
-    </inferredMetricsTieBreakers>
 </document>
