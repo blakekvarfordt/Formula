@@ -11,8 +11,9 @@
 		63C29CAB231DAFD000910ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C29CA9231DAFD000910ECB /* Main.storyboard */; };
 		63C29CAD231DAFD000910ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C29CAC231DAFD000910ECB /* Assets.xcassets */; };
 		63C29CB0231DAFD000910ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C29CAE231DAFD000910ECB /* LaunchScreen.storyboard */; };
-		63C29CB8231DAFF800910ECB /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C29CB7231DAFF800910ECB /* Formula.swift */; };
-		63C29CBA231DB10100910ECB /* FormulaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C29CB9231DB10100910ECB /* FormulaController.swift */; };
+		63C29CBC231DB51400910ECB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C29CBB231DB51400910ECB /* DetailViewController.swift */; };
+		63C29CC8231DC2A800910ECB /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C29CC7231DC2A800910ECB /* Formula.swift */; };
+		63C29CCA231DC33700910ECB /* FormulaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C29CC9231DC33700910ECB /* FormulaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +23,9 @@
 		63C29CAC231DAFD000910ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63C29CAF231DAFD000910ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63C29CB1231DAFD000910ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63C29CB7231DAFF800910ECB /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
-		63C29CB9231DB10100910ECB /* FormulaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaController.swift; sourceTree = "<group>"; };
+		63C29CBB231DB51400910ECB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		63C29CC7231DC2A800910ECB /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
+		63C29CC9231DC33700910ECB /* FormulaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		63C29CA4231DAFD000910ECB /* Formula */ = {
 			isa = PBXGroup;
 			children = (
-				63C29CA5231DAFD000910ECB /* AppDelegate.swift */,
+				63C29CC4231DB7F200910ECB /* Resources */,
+				63C29CC3231DB77E00910ECB /* ViewControllers */,
+				63C29CC2231DB74300910ECB /* ModelControllers */,
+				63C29CC1231DB73A00910ECB /* Models */,
 				63C29CA9231DAFD000910ECB /* Main.storyboard */,
-				63C29CB7231DAFF800910ECB /* Formula.swift */,
-				63C29CB9231DB10100910ECB /* FormulaController.swift */,
+			);
+			path = Formula;
+			sourceTree = "<group>";
+		};
+		63C29CC1231DB73A00910ECB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63C29CC7231DC2A800910ECB /* Formula.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		63C29CC2231DB74300910ECB /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		63C29CC3231DB77E00910ECB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				63C29CBB231DB51400910ECB /* DetailViewController.swift */,
+				63C29CC9231DC33700910ECB /* FormulaController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		63C29CC4231DB7F200910ECB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63C29CA5231DAFD000910ECB /* AppDelegate.swift */,
 				63C29CAC231DAFD000910ECB /* Assets.xcassets */,
 				63C29CAE231DAFD000910ECB /* LaunchScreen.storyboard */,
 				63C29CB1231DAFD000910ECB /* Info.plist */,
 			);
-			path = Formula;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C29CBA231DB10100910ECB /* FormulaController.swift in Sources */,
-				63C29CB8231DAFF800910ECB /* Formula.swift in Sources */,
+				63C29CCA231DC33700910ECB /* FormulaController.swift in Sources */,
 				63C29CA6231DAFD000910ECB /* AppDelegate.swift in Sources */,
+				63C29CBC231DB51400910ECB /* DetailViewController.swift in Sources */,
+				63C29CC8231DC2A800910ECB /* Formula.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83YG3ZQCH4;
-				INFOPLIST_FILE = Formula/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Formula/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83YG3ZQCH4;
-				INFOPLIST_FILE = Formula/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Formula/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

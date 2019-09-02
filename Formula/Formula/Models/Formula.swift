@@ -10,10 +10,12 @@ import Foundation
 
 class Formula {
     let title: String
-    let number: Int
+    let summary: String
+    var digit: Int
     
-    init(title: String, number: Int) {
+    init(title: String, summary: String, digit: Int = 0) {
         self.title = title
-        self.number = number
+        self.summary = summary
+        self.digit = digit
     }
 }
