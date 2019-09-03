@@ -9,22 +9,36 @@
 import UIKit
 
 class FormulaViewController: UIViewController {
-
+    
+    @IBOutlet weak var totalMonthlyExpensesLabel: UILabel!
+    
+    @IBOutlet weak var groceryTextField: UITextField!
+    @IBOutlet weak var healthTextField: UITextField!
+    @IBOutlet weak var renttextField: UITextField!
+    @IBOutlet weak var uitilitiesTextField: UITextField!
+    @IBOutlet weak var transportationTextField: UITextField!
+    @IBOutlet weak var entertainmentTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func calculateButtonTapped(_ sender: Any) {
+    addNumbers()
     }
-    */
-
+    
+    func addNumbers() {
+        guard let grocery = groceryTextField.text, let health = healthTextField.text, let rent = renttextField.text, let utilities = uitilitiesTextField.text, let transportation = transportationTextField.text, let entertainment = entertainmentTextField.text else { return }
+        
+        guard let groceryTotal = Int(grocery), let healthTotal = Int(health), let rentTotal = Int(rent), let utilitiesTotal = Int(utilities), let transportationTotal = Int(transportation), let entertainmentTotal = Int(entertainment) else { return }
+        
+        let sum = healthTotal + groceryTotal + rentTotal + utilitiesTotal + transportationTotal + entertainmentTotal
+        
+        totalMonthlyExpensesLabel.text = "\(sum)"
+        
+        
+    }
+    
 }
